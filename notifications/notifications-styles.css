@@ -1,0 +1,15 @@
+.notifications {
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 40%;
+}
+
+.notifications.success {
+    background-color: aquamarine;
+}
+
+.notifications.error {
+    background-color: lightcoral;
+    color: white;
+}

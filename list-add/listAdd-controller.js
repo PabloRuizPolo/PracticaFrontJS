@@ -1,3 +1,4 @@
+import { dispatchEvent } from "../utils/eventsCreator.js";
 import { getAdds } from "./listAdd-model.js";
 import { showAdds, showNoAdds } from "./listAdd-view.js";
 
@@ -11,8 +12,11 @@ export async function listAddController(listAdd) {
             renderShowNoAdds(listAdd)
         }
         
-    } catch (error) {
-        alert(error)
+    } catch (errorMessage) {
+        dispatchEvent('error-getting-adds', {
+            message: errorMessage,
+            type: 'error'
+        }, listAdd)
     }
 }
 

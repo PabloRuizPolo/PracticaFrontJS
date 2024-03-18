@@ -9,7 +9,7 @@ export async function getAdds() {
         const data = await response.json();
         adds = parseData(data);
     } catch (error) {
-        throw new Error('Error getting the adds list');
+        throw new Error('getting the adds list');
     }
 
     return adds
