@@ -8,4 +8,8 @@ export function showAdds(add) {
     <p>${add.precio}</p>
     <p>${add.descripcion}</p>
     `
+};
+
+export function showNoAdds() {
+    return `<p>Lo sentimos, en estos momentos no tenemos ningún aunucio</p>`
 }

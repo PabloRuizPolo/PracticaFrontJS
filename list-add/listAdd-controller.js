@@ -1,11 +1,16 @@
 import { getAdds } from "./listAdd-model.js";
-import { showAdds } from "./listAdd-view.js";
+import { showAdds, showNoAdds } from "./listAdd-view.js";
 
 
 export async function listAddController(listAdd) {
     try {
         const adds = await getAdds();
-        renderAdds(adds, listAdd)
+        if (adds.length > 0) {
+            renderAdds(adds, listAdd)
+        } else {
+            renderShowNoAdds(listAdd)
+        }
+        
     } catch (error) {
         alert(error)
     }
@@ -19,5 +24,9 @@ function renderAdds(adds, listAdd) {
 
     });
 }
-// ok crear un div para cada add
-// OK Pasarle cada anuncio a showadds
+
+function renderShowNoAdds(listAdd) {
+    const noAddsDiv = document.createElement('div');
+    noAddsDiv.innerHTML = showNoAdds()
+    listAdd.appendChild(noAddsDiv)
+}
