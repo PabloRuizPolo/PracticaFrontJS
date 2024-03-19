@@ -21,6 +21,7 @@ function parseData(data) {
         foto: data.foto,
         descripcion: data.descripcion,
         precio: data.precio,
-        venta: data.venta
+        venta: data.venta,
+        id: data.id
     }))
 }

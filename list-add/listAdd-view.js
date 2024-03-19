@@ -2,7 +2,7 @@
 
 export function showAdds(add) {
     return `
-    <a href="detailAdd.html">
+    <a href="detailAdd.html?AddId=${add.id}">
         <p>${add.nombre}</p>
         <p>${add.foto ? 'Se vende' : 'Se compra'}</p>
         <img>${add.foto}</img>
