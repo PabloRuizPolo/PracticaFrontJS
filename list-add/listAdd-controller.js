@@ -4,7 +4,9 @@ import { showAdds, showNoAdds } from "./listAdd-view.js";
 
 
 export async function listAddController(listAdd) {
+    const loaderRullet = document.querySelector('.lds-spinner')
     try {
+        loaderRullet.classList.toggle('hidden')
         const adds = await getAdds();
         if (adds.length > 0) {
             renderAdds(adds, listAdd)
@@ -17,6 +19,8 @@ export async function listAddController(listAdd) {
             message: errorMessage,
             type: 'error'
         }, listAdd)
+    } finally {
+        loaderRullet.classList.toggle('hidden')
     }
 }
 
