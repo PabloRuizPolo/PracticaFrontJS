@@ -7,6 +7,10 @@ export async function getAddData(AddId) {
         const data = await response.json()
         const add = parseAdd(data);
         
+        if (!response.ok) {
+            throw new Error
+        }
+
         return add
         
     } catch (error) {
