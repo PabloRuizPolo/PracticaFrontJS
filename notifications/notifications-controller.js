@@ -7,6 +7,10 @@ export function notificationsController(element) {
         notificationDiv.classList.add('notifications', type);
         notificationDiv.innerHTML = showNotification(message);
         element.appendChild(notificationDiv)
+
+        setTimeout(()=>{
+            notificationDiv.remove()
+        }, 2000)
     }
 
     return {createNotificationDiv}
