@@ -1,12 +1,14 @@
+import { loaderRuletController } from "../loader/loaderRulet-controller.js";
 import { dispatchEvent } from "../utils/eventsCreator.js";
 import { getAdds } from "./listAdd-model.js";
 import { showAdds, showNoAdds } from "./listAdd-view.js";
 
+const loaderRulet = document.querySelector('#loaderRulet')
+const {createLoader, removeLoader} = loaderRuletController(loaderRulet)
 
 export async function listAddController(listAdd) {
-    const loaderRullet = document.querySelector('.lds-spinner')
     try {
-        loaderRullet.classList.toggle('hidden')
+        createLoader()
         const adds = await getAdds();
         if (adds.length > 0) {
             renderAdds(adds, listAdd)
@@ -20,7 +22,7 @@ export async function listAddController(listAdd) {
             type: 'error'
         }, listAdd)
     } finally {
-        loaderRullet.classList.toggle('hidden')
+        removeLoader()
     }
 }
 

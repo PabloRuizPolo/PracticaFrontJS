@@ -1,5 +1,8 @@
-.lds-spinner.hidden {
-    display: none;
+.lds-spinner .active {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-content: center;
 }
 
 .lds-spinner {
@@ -24,7 +27,7 @@
     width: 6px;
     height: 18px;
     border-radius: 20%;
-    background: black;
+    background: blue;
   }
   .lds-spinner div:nth-child(1) {
     transform: rotate(0deg);

@@ -10,7 +10,7 @@ export async function getAddData(AddId) {
         return add
         
     } catch (error) {
-        alert(error)        
+        throw new Error('Getting add details')     
     }
 }
 

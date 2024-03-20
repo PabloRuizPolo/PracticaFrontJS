@@ -1,0 +1,4 @@
+
+export function showLoaderRulet() {
+    return `<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`
+}
