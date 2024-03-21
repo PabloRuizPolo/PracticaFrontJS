@@ -7,7 +7,8 @@ export function sessionController(nav) {
     if (isUserLogin()) {
         nav.innerHTML = createUserPage();
         const logOutButton = nav.querySelector('#logOut');
-        logOutButton.addEventListener('click', () => {
+        logOutButton.addEventListener('click', (event) => {
+            event.preventDefault()
             localStorage.removeItem('token')
             dispatchEvent('close-session', {
                 message: 'Sesión cerrada',

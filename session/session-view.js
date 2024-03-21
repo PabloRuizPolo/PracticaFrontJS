@@ -1,10 +1,7 @@
 
 
 export function createUserPage() {
-    return `<a href="createAdd.html">
-        <button>Crea un anuncio</button>
-    </a>
-    <button id="logOut">Cerrar Sesión</button>`
+    return `<a href="createAdd.html"><button>Crea un anuncio</button></a> <button id="logOut">Cerrar Sesión</button>`
 }
 
 export function createIndexPage() {
