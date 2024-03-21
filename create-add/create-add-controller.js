@@ -17,7 +17,12 @@ export function createAddController(element) {
 
     try {
         await newAddSend(addData)
-        setTimeout((window.location.href = 'index.html'), 2000)
+        dispatchEvent('createAdd-event', {
+            message: 'Anuncio creado',
+            type: 'success'
+        }, element)
+        window.location.href = 'index.html'
+
     } catch (error) {
         dispatchEvent('createAdd-event', {
             message: error.message,
