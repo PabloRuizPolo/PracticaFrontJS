@@ -3,10 +3,10 @@ import { dispatchEvent } from "../utils/eventsCreator.js";
 import { getAdds } from "./listAdd-model.js";
 import { showAdds, showNoAdds } from "./listAdd-view.js";
 
-const loaderRulet = document.querySelector('#loaderRulet')
-const {createLoader, removeLoader} = loaderRuletController(loaderRulet)
 
 export async function listAddController(listAdd) {
+    const loaderRulet = document.querySelector('#loaderRulet')
+    const {createLoader, removeLoader} = loaderRuletController(loaderRulet)
     try {
         createLoader()
         const adds = await getAdds();
