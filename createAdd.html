@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Add</title>
+    <link rel="stylesheet" href="notifications/notifications-styles.css">
+    <link rel="stylesheet" href="utils/styless-PabloPop.css">
 </head>
 <body>
+    <script type="module" src="createAdd.js"></script>
+    <section class="notifications-section"></section>
+
     <h2>Crea un anuncio</h2>
+    <section id="createAdd">
+        <form id="newAdd-form">
+            <p>¿Qué deseas hacer?</p>
+            <input type="radio" id="vender" value="vender" name="accion">
+            <label for="vender">Vender un producto</label><br>
+            <input type="radio" id="comprar" value="comprar" name="accion">
+            <label for="comprar">Comprar un producto</label><br>
+            <br>
+            <label for="name">Nombre del producto</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="image">Foto del producto</label>
+            <input type="text" id="image" name="image">
+            <br>
+            <label for="price">Precio del producto</label>
+            <input type="number" id="price" name="price" required placeholder="euros">
+            <br>
+            <label for="description">Descripción del producto</label> <br>
+            <textarea id="description" cols="30" rows="10" name="description" required></textarea>
+            <br>
+            <button type="submit">Publicar</button>
+        </form>
+    </section>
     
 </body>
 </html>

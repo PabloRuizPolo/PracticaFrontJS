@@ -24,7 +24,7 @@ export function loginController(element) {
                 type: 'success'
             }, element)
             localStorage.setItem('token', jwt)
-            window.location.href = "index.html"
+            setTimeout((window.location.href = 'index.html'), 2000)
         } catch (error) {
             dispatchEvent('login-notification', {
                 message: error.message,
