@@ -10,7 +10,7 @@ export function notificationsController(element) {
 
         setTimeout(()=>{
             notificationDiv.remove()
-        }, 2000)
+        }, 3000)
     }
 
     return {createNotificationDiv}

@@ -1,6 +1,5 @@
 import { notificationsController } from "./notifications/notifications-controller.js";
 import { singUpController } from "./singUp/singUp-controller.js";
-import { loaderRuletController } from "../loader/loaderRulet-controller.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     const singUpForm = document.querySelector('#singup-form');
