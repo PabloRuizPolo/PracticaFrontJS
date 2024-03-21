@@ -7,3 +7,18 @@ a {
 h2 {
   text-align: center;
 }
+
+.listAdd {
+  display: inline-block
+}
+
+div {
+  border: solid 1px rgb(74, 160, 107);
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+div + div {
+  margin-top: 3px;
+}

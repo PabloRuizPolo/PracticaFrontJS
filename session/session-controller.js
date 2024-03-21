@@ -13,7 +13,7 @@ export function sessionController(nav) {
             dispatchEvent('close-session', {
                 message: 'Sesión cerrada',
                 type: 'success'
-            }, )
+            }, nav)
             sessionController(nav)
         })
         

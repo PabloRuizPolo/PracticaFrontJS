@@ -19,6 +19,10 @@ export async function newAddSend(addData) {
 
     }
     } catch (error) {
-        throw error.message  
+        if (error.message) {
+            throw error.message
+        } else {
+            throw error;
+        } 
     }
 }

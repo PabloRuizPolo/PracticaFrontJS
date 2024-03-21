@@ -17,6 +17,11 @@ export async function loginUser(mail, password) {
         }
 
     } catch (error) {
-        throw error.message;
+        if (error.message) {
+            throw error.message
+        } else {
+            throw error;
+        }
+       
     }
 }
