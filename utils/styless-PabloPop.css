@@ -22,3 +22,7 @@ div {
 div + div {
   margin-top: 3px;
 }
+
+.hidden {
+  display: none;
+}

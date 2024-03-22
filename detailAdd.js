@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailAdd = document.querySelector('.detailAdd');
     const notificationsSection = document.querySelector('.notifications-section')
 
+
     const {createNotificationDiv} = notificationsController(notificationsSection) 
 
     detailAdd.addEventListener('error-getting-addDetail', (event) => {

@@ -51,7 +51,7 @@ export function singUpController(element) {
             createLoader()
             await newUser(mail.value, password.value);
             dispatchEvent('NotificationSingUp', {
-                message: 'Registrado correctamente',
+                message: 'Registrado correctamente. Inicie sesión',
                 type: 'success'
             }, element)
 

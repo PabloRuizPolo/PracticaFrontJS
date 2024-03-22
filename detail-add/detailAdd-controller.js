@@ -1,29 +1,41 @@
 import { loaderRuletController } from "../loader/loaderRulet-controller.js";
 import { dispatchEvent } from "../utils/eventsCreator.js";
-import { getAddData } from "./detailAdd-model.js";
+import { deleteAdd, getAddData, getIdUser } from "./detailAdd-model.js";
 import { showAdd } from "./detailAdd-view.js";
 
-const loaderRulet = document.querySelector('#loaderRulet')
-const {createLoader, removeLoader} = loaderRuletController(loaderRulet)
+
 
 export async function detailAddController (element) {
+    const loaderRulet = element.querySelector('#loaderRulet')
+    const {createLoader, removeLoader} = loaderRuletController(loaderRulet)
+    const params = new URLSearchParams(window.location.search);
+    const AddId = params.get('AddId');
+
+    if (!AddId) {
+        window.location.href = './index.html'
+    };
+
     try {
+        const token = localStorage.getItem('token')
         createLoader()
-        const params = new URLSearchParams(window.location.search);
-        const AddId = params.get('AddId')
-
-        if (!AddId) {
-            window.location.href = './index.html'
-        }
-
         const addToShow = await getAddData(AddId);
-        createAddDiv(addToShow, element)
+        const userData = await getIdUser(token)
+        const removeButton = element.querySelector('#eliminarButton')
+        if (addToShow.userId === userData.userId) {
+            removeButton.classList.remove('hidden')
+        }
+        createAddDiv(addToShow, element);
+        removeButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            deleteAdd(token, AddId);
+        })
 
     } catch (errorMessage) {
         dispatchEvent('error-getting-addDetail', {
             message: errorMessage,
             type: 'error'
-        }, element)
+        }, element);
+        window.location.href = './index.html'
     } finally {
         removeLoader()
     }
@@ -31,6 +43,10 @@ export async function detailAddController (element) {
     function createAddDiv (addToShow, element) {
         const addDiv = element.querySelector('.add-div');
         addDiv.innerHTML = showAdd(addToShow);
+
     }
+
+
+    
 }
 
