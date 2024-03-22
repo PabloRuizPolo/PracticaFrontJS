@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const {createNotificationDiv} = notificationsController(notificationsSection) 
 
-    detailAdd.addEventListener('error-getting-addDetail', (event) => {
+    detailAdd.addEventListener('addDetail', (event) => {
         createNotificationDiv(event.detail.message, event.detail.type)
         event.stopPropagation()
     })

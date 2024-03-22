@@ -25,13 +25,20 @@ export async function detailAddController (element) {
             removeButton.classList.remove('hidden')
         }
         createAddDiv(addToShow, element);
+
+        
         removeButton.addEventListener('click', (event) => {
             event.preventDefault();
-            deleteAdd(token, AddId);
+            deleteAddConfirm(token, AddId);
+            dispatchEvent('addDetail', {
+                message: 'Anuncio eliminado',
+                type: 'success'
+            }, element);
+            window.location.href = './index.html'
         })
 
     } catch (errorMessage) {
-        dispatchEvent('error-getting-addDetail', {
+        dispatchEvent('addDetail', {
             message: errorMessage,
             type: 'error'
         }, element);
@@ -46,7 +53,15 @@ export async function detailAddController (element) {
 
     }
 
-
+    function deleteAddConfirm(token, AddId) {
+        if (window.confirm('¿Estás seguro que quieres eliminar este anuncio?')) {
+            try {
+                deleteAdd(token, AddId);            
+            } catch (error) {
+                throw new Error(error.message)
+            }
+        }
+    }
     
 }
 
