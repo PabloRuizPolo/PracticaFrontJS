@@ -1,0 +1,43 @@
+{
+  "anuncios": [
+    {
+      "id": 0,
+      "nombre": "Tabla Surf Pukas",
+      "foto": "https://margruesa.com/wp-content/uploads/2017/11/Pukas-Surf-Surfboards-black-friday-2017-750x500.jpg",
+      "descripcion": "Tabla de fibra para olas grandes. Medidaas de la tabla: 5'11'', 30 litros",
+      "precio": 350,
+      "venta": true,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Bicicleta Carbono Velódromo",
+      "foto": "https://imbikes.com/11869-medium_default/bicicleta-de-pista-krn-track-pro-carbon-velodromo.jpg",
+      "descripcion": "Es una bicicleta diseñada para competir en velódromo no admite frenos. Fibra de Carbono",
+      "precio": 1400,
+      "venta": true,
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "nombre": "MacBook Air",
+      "foto": "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D828/https://d2e6ccujb3mkqf.cloudfront.net/e2d5ade9-3e93-422f-9cd7-8ad8a187c6ac-1_f168864d-0208-4c8d-a46d-aee0e6faa668.jpg",
+      "descripcion": "Soy un pipiolín, y estoy en búsqueda de un MacBook Air de 2ª Mano",
+      "precio": "Máximo de 600",
+      "venta": false,
+      "userId": 1
+    }
+  ],
+  "users": [
+    {
+      "username": "pablo.ruiz.polo@gmail.com",
+      "password": "$2b$10$wXm/xb/ga8sVy0okmnVbtOyn/TQNYihH19jez/ka8yCBB88VNFMPm",
+      "id": 1
+    },
+    {
+      "username": "pablo4@gmail.com",
+      "password": "$2b$10$Ng3wXN.YiCEu7GWbvVee9uHee6pBrrM4jqUDPI9Qv7qzBu/FKFpP.",
+      "id": 2
+    }
+  ]
+}
