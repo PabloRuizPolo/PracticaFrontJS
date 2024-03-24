@@ -29,6 +29,7 @@ export async function listAddController(listAdd) {
 function renderAdds(adds, listAdd) {
     adds.forEach(add => {
         const addDiv = document.createElement('div');
+        addDiv.classList.add('pop')
         addDiv.innerHTML = showAdds(add);
         listAdd.appendChild(addDiv)
 
@@ -37,6 +38,7 @@ function renderAdds(adds, listAdd) {
 
 function renderShowNoAdds(listAdd) {
     const noAddsDiv = document.createElement('div');
+    addDiv.classList.add('pop')
     noAddsDiv.innerHTML = showNoAdds()
     listAdd.appendChild(noAddsDiv)
 }

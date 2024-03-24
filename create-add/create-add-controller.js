@@ -8,6 +8,10 @@ export function createAddController(element) {
     const {createLoader, removeLoader} = loaderRuletController(loaderRulet)
     
     if (!isUserLogin()) {
+        dispatchEvent('createAdd-event', {
+            message: 'Inicia sesión para crear un anuncio',
+            type: 'error'
+        }, element)
         window.location.href = 'index.html'
     } else {
         element.addEventListener('submit', async (event) => {

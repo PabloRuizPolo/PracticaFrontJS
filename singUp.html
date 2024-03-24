@@ -6,16 +6,20 @@
     <title>SingUp</title>
     <link rel="stylesheet" href="loaderRulet.css">
     <link rel="stylesheet" href="notifications/notifications-styles.css">
+    <link rel="stylesheet" href="utils/styless-PabloPop.css">
 </head>
+<header>
+    <a class="pablopop" href="./index.html">PabloPop</a>
+</header>
 <body>
     <script type="module" src="singUp.js"></script>
     <section class="notifications-section"></section>
     
-    <h2>Regístrate!</h2>
+    <h2 class="tittle">Regístrate!</h2>
     <form id="singup-form">
         <section id="loaderRulet"></section>
         <label for="mail">Email</label>
-        <input type="text" id="mail" requiered>
+        <input type="email" id="mail" requiered>
         <br>
         <label for="password">Contraseña</label>
         <input type="password" id="password" required minlength="5">

@@ -6,19 +6,23 @@
     <title>Login</title>
     <link rel="stylesheet" href="loaderRulet.css">
     <link rel="stylesheet" href="notifications/notifications-styles.css">
+    <link rel="stylesheet" href="utils/styless-PabloPop.css">
 </head>
+<header>
+    <a class="pablopop" href="./index.html">PabloPop</a>
+</header>
 <body>
     <script type="module" src="login.js"></script>
     <section class="notifications-section"></section>
 
-    <h2>Inicia Sesión</h2>
+    <h2 class="tittle">Inicia Sesión</h2>
     <form id="login-form">
-        <section id="loaderRulet"></section>
-        <label for="mail">Email</label>
-        <input type="email" id="mail" required>
+        <section class="form_member" id="loaderRulet"></section>
+        <label class="form_member" for="mail">Email</label>
+        <input class="form_member" type="email" id="mail" required>
         <br>
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" required>
+        <label class="form_member" for="password">Contraseña</label>
+        <input class="form_member" type="password" id="password" required>
         <br>
         <button type="submit">Entrar</button>
     </form>
